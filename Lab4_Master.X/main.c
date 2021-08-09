@@ -1,8 +1,8 @@
 /*
  * File:   main.c
- * Author: Pablo
+ * Author: Pablo Herrarte
  * Ejemplo de uso de I2C Master
- * Created on 17 de febrero de 2020, 10:32 AM
+ * Created on 9 de agosto de 2021
  */
 //*****************************************************************************
 // Palabra de configuraci n

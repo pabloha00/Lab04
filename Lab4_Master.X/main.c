@@ -31,7 +31,7 @@
 //*****************************************************************************
 #include <stdint.h>
 #include <pic16f887.h>
-#include "I2C.h"
+#include "I2C.h"        //Se llaman las librerías
 #include "LCD.h"
 #include "ASCII_2.h"
 #include <xc.h>
@@ -39,10 +39,10 @@
 // Definici n de variables
 //*****************************************************************************
 #define _XTAL_FREQ 8000000
-uint8_t POT = 0;
-uint8_t CONT = 0;
-uint8_t TEMP = 0;
-uint8_t NUM = 0;
+uint8_t POT = 0;        //Potenciometro
+uint8_t CONT = 0;       //Contador
+uint8_t TEMP = 0;       //Temperatura
+uint8_t NUM = 0;        //Conversión de temperatura
 char Cen1 = 0;  //Dígito de potenciómetros, contador y temperatura
 char Cen2 = 0;
 char Cen3 = 0;
@@ -65,10 +65,10 @@ char AU3 = 0;
 // Definici n de funciones para que se puedan colocar despu s del main de lo 
 // contrario hay que colocarlos todas las funciones antes del main
 //*****************************************************************************
-void setup(void);
+void setup(void);   //Setup
 void LECT1(void);   //Separación de dígitos y lectura del potenciómetro 1
-void LECT2(void);   //Separación de dígitos y lectura del potenciómetro 2
-void LECT3(void);   //Separación de digitos y lectura del contador
+void LECT2(void);   //Separación de dígitos y lectura contador
+void LECT3(void);   //Separación de digitos y lectura de la temperatura
 const char* conver(char A, char B, char C); //Datos que recibirá la LCD
 //*****************************************************************************
 // Main
@@ -81,41 +81,41 @@ void main(void) {
         Lcd_Write_String("S1    S2    S3"); //Escribir S1 S2 S3
         Lcd_Set_Cursor(2,1);    //Cursor en segunda línea
         Lcd_Write_String(conver(AC3, AD3, AU3));    //Escribir los datos para el LCD con esa función
-        LECT1();    
+        LECT1();                //Conversiones
         LECT2();
         LECT3();
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribir
         I2C_Master_Write(0x50);
         I2C_Master_Write(0);
         I2C_Master_Stop();
         __delay_ms(10);
        
-        I2C_Master_Start();
+        I2C_Master_Start();     //Leer datos del potenciometro
         I2C_Master_Write(0x51);
         POT = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(10);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribir
         I2C_Master_Write(0x60);
         I2C_Master_Write(0);
         I2C_Master_Stop();
         __delay_ms(10);
        
-        I2C_Master_Start();
+        I2C_Master_Start();     //Leer datos del contador
         I2C_Master_Write(0x61);
         CONT = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(10);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribir
         I2C_Master_Write(0x80);
         I2C_Master_Write(0xF3);
         I2C_Master_Stop();
         __delay_ms(100);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Leer dato de temperatura
         I2C_Master_Write(0x81);
         TEMP = I2C_Master_Read(0);
         I2C_Master_Stop();
@@ -170,14 +170,14 @@ void LECT1(void){ //Para el primer puerto analógica
     AD1 = num_ascii(Dec1);
     AU1 = num_ascii(Un1);
 }
-void LECT2(void){ //Se hace lo mismo para el segundo potenciómetro
+void LECT2(void){ //Se hace lo mismo para el contador
     Dec2 = CONT/10;
     Un2 = CONT-Dec2*10;
     AD2 = num_ascii(Dec2);
     AU2 = num_ascii(Un2);
 }
 void LECT3(void){
-    if (TEMP>=68){
+    if (TEMP>=68){      //Conversión de números positivos para temperatura
         NUM = 24*TEMP/35-1632/35;
         Cen3 = NUM/100;
         Dec3 = (NUM-Cen3*100)/10;
@@ -187,7 +187,7 @@ void LECT3(void){
         AU3 = num_ascii(Un3);
     }
     else{
-        NUM = (877/19)-13*TEMP/19;
+        NUM = (877/19)-13*TEMP/19;      //Conversión de números negativos para temperatura
         AC3 = 0x2D;
         Dec3 = NUM/10;
         Un3 = NUM - Dec3*10;

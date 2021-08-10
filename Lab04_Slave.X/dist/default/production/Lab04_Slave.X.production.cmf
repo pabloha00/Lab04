@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\xcAsgco.o
+$C:\Users\user\AppData\Local\Temp\xcAskoc.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -74,15 +74,15 @@ STRING 1AD-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab04_Slave.X.production.o
-F cinit CODE >813:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-F cinit CODE >816:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-F cinit CODE >836:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-10 cinit CODE >837:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-11 cinit CODE >838:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-12 cinit CODE >839:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-13 cinit CODE >845:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-13 cinit CODE >847:C:\Users\user\AppData\Local\Temp\xcAsgco.s
-14 cinit CODE >848:C:\Users\user\AppData\Local\Temp\xcAsgco.s
+F cinit CODE >813:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+F cinit CODE >816:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+F cinit CODE >836:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+10 cinit CODE >837:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+11 cinit CODE >838:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+12 cinit CODE >839:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+13 cinit CODE >845:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+13 cinit CODE >847:C:\Users\user\AppData\Local\Temp\xcAskoc.s
+14 cinit CODE >848:C:\Users\user\AppData\Local\Temp\xcAskoc.s
 4 intentry CODE >54:C:\Users\user\OneDrive\Documentos\GitHub\Lab04\Lab04_Slave.X\main.c
 BD text5 CODE >54:C:\Users\user\OneDrive\Documentos\GitHub\Lab04\Lab04_Slave.X\main.c
 BD text5 CODE >55:C:\Users\user\OneDrive\Documentos\GitHub\Lab04\Lab04_Slave.X\main.c
@@ -313,21 +313,21 @@ __Hstrings 0 0 ABS 0 strings -
 _ADCL 30C 0 CODE 0 text3 dist/default/production\Lab04_Slave.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsgco.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAskoc.o
 _main 336 0 CODE 0 maintext dist/default/production\Lab04_Slave.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
-start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAsgco.o
+start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAskoc.o
 __size_of_ADCL 0 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_ADC_init 0 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsgco.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAskoc.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
@@ -341,8 +341,8 @@ __Lmaintext 0 0 ABS 0 maintext -
 _ADC_init 2E 0 CODE 0 text4 dist/default/production\Lab04_Slave.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 __end_of_ADC_init 17A 0 CODE 0 text4 dist/default/production\Lab04_Slave.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsgco.o
-___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsgco.o
+___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAskoc.o
+___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAskoc.o
 _I2C_Slave_Init 2D8 0 CODE 0 text2 dist/default/production\Lab04_Slave.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Lab04_Slave.X.production.o
@@ -354,7 +354,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 _TRISA0 428 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsgco.o
+___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAskoc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -400,7 +400,7 @@ _isr 17A 0 CODE 0 text5 dist/default/production\Lab04_Slave.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 __end_of_isr 26C 0 CODE 0 text5 dist/default/production\Lab04_Slave.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAsgco.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAskoc.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Lab04_Slave.X.production.o
 _nowadc 77 0 COMMON 1 bssCOMMON dist/default/production\Lab04_Slave.X.production.o
 __pmaintext 336 0 CODE 0 maintext dist/default/production\Lab04_Slave.X.production.o

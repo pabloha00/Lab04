@@ -31,7 +31,7 @@
 //*****************************************************************************
 #include <stdint.h>
 #include <pic16f887.h>
-#include "I2C_1.h"
+#include "I2C_1.h"      //Llamar librerías
 #include "ADC_3.h"
 #include <xc.h>
 //*****************************************************************************
@@ -113,7 +113,7 @@ void setup(void){
     ANSEL = 0;
     ANSELH = 0;
     ANSEL = 0b0000001; //Puertos analógicos y digitales
-    TRISA0 = 1; //Inputs para las señales analógicas y slave select
+    TRISA0 = 1; //Inputs para las señales analógicas
     TRISB = 0;
     TRISD = 0;
     PORTA = 0;

@@ -31,7 +31,7 @@
 //*****************************************************************************
 #include <stdint.h>
 #include <pic16f887.h>
-#include "I2C_2.h"
+#include "I2C_2.h"      //Se llaman librerías
 #include <xc.h>
 //*****************************************************************************
 // Definici n de variables
@@ -64,7 +64,7 @@ void __interrupt() isr(void){
             if (AR1==1){
                 PORTD++;
                 AR2=1;
-                if (PORTD > 15){
+                if (PORTD > 15){    //Al ser un contador de 4 bits, al superar 15 regresa a 0
                     PORTD = 0;
                 }
             }
@@ -77,7 +77,7 @@ void __interrupt() isr(void){
             if (AR3==1){
                 PORTD--;
                 AR4=1;
-                if (PORTD == 255){
+                if (PORTD == 255){     //Al ser contador de 4 bits, en lugar de llegar a 255 regresa a 15
                     PORTD = 15;
                 }
             }
